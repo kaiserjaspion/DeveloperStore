@@ -35,9 +35,9 @@ namespace Developer.Store.Server.Controllers
             {
                 return StatusCode(500, new ErrorResponse
                 {
-                    Type = "",
-                    Error = "",
-                    Detail = ex.Message,
+                    Type = ex.GetType().ToString(),
+                    Error = ex.Message,
+                    Detail = ex.InnerException.Message,
                 });
             }
         }
@@ -53,9 +53,9 @@ namespace Developer.Store.Server.Controllers
             {
                 return StatusCode(500, new ErrorResponse
                 {
-                    Type = "",
-                    Error = "",
-                    Detail = ex.Message,
+                    Type = ex.GetType().ToString(),
+                    Error = ex.Message,
+                    Detail = ex.InnerException.Message,
                 });
             }
         }
@@ -71,9 +71,9 @@ namespace Developer.Store.Server.Controllers
             {
                 return StatusCode(500, new ErrorResponse
                 {
-                    Type = "",
-                    Error = "",
-                    Detail = ex.Message,
+                    Type = ex.GetType().ToString(),
+                    Error = ex.Message,
+                    Detail = ex.InnerException.Message,
                 });
             }
         }
@@ -89,9 +89,9 @@ namespace Developer.Store.Server.Controllers
             {
                 return StatusCode(500, new ErrorResponse
                 {
-                    Type = "",
-                    Error = "",
-                    Detail = ex.Message,
+                    Type = ex.GetType().ToString(),
+                    Error = ex.Message,
+                    Detail = ex.InnerException.Message,
                 });
             }
         }
@@ -108,9 +108,9 @@ namespace Developer.Store.Server.Controllers
             {
                 return StatusCode(500, new ErrorResponse
                 {
-                    Type = "",
-                    Error = "",
-                    Detail = ex.Message,
+                    Type = ex.GetType().ToString(),
+                    Error = ex.Message,
+                    Detail = ex.InnerException.Message,
                 });
             }
         }
