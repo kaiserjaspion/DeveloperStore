@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Developer.Store.Data.Domain.Tables
 {
-    [Table("SaleProduct")]
+    [Table("Sale")]
     public class Sale
     {
         [Key]
@@ -18,7 +18,6 @@ namespace Developer.Store.Data.Domain.Tables
         public decimal TotalAmount { get; set; }
         public string Branch { get; set; }
         public bool Canceled { get; set; }
-
         public User User { get; set; }
         public List<SaleProduct> SaleProducts { get; set; }
 

@@ -13,6 +13,7 @@ namespace Developer.Store.Data.Domain.Tables
     {
         [Key]
         public int Id { get; set; }
+        [ForeignKey("Sale")]
         public int SaleId { get; set; }
         public int ProductId { get; set; }
         [Range(1, 20)]
