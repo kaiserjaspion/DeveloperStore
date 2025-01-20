@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer.Store.Commands", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer.Store.Services", "Developer.Store.Services\Developer.Store.Services.csproj", "{07BE3CEF-2825-4746-9B2D-C94CCB3D4D13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Developer.Store.Queue.Worker", "Developer.Store.Queue.Worker\Developer.Store.Queue.Worker.csproj", "{EFC0ACE2-197E-4E83-BE07-A94E04A63DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{07BE3CEF-2825-4746-9B2D-C94CCB3D4D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07BE3CEF-2825-4746-9B2D-C94CCB3D4D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07BE3CEF-2825-4746-9B2D-C94CCB3D4D13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFC0ACE2-197E-4E83-BE07-A94E04A63DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFC0ACE2-197E-4E83-BE07-A94E04A63DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFC0ACE2-197E-4E83-BE07-A94E04A63DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFC0ACE2-197E-4E83-BE07-A94E04A63DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Developer.Store.Queue.Worker": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
