@@ -25,7 +25,7 @@ namespace Developer.Store.Tests
 
         private static LoginRequest CreateCart()
         {
-            var login = new Faker<LoginRequest>("Pt-br")
+            var login = new Faker<LoginRequest>("pt_BR")
                 .RuleFor(p => p.Username, m => m.Person.UserName)
                 .RuleFor(p => p.Password, m => m.Internet.Password())
                 .Generate();

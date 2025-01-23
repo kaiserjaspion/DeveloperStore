@@ -24,7 +24,8 @@ namespace Developer.Store.Tests
         public async void NewUserTest()
         {
             var user = CreateUser();
-            Assert.NotNull(await _service.RegisterUser(user));
+            var result = await _service.RegisterUser(user);
+            Assert.NotNull(result);
         }
 
         [Fact]
@@ -52,7 +53,7 @@ namespace Developer.Store.Tests
 
         private static UserRequest CreateUser()
         {
-            var user = new Faker<UserRequest>("Pt-br")
+            var user = new Faker<UserRequest>("pt_BR")
                 .RuleFor(p => p.Email, m => m.Person.Email)
                 .RuleFor(p => p.Username, m => m.Person.UserName)
                 .RuleFor(p => p.Password, m => m.Internet.Password())
@@ -67,7 +68,7 @@ namespace Developer.Store.Tests
 
         private static UserNameRequest CreateUserName()
         {
-            var userName = new Faker<UserNameRequest>("Pt-br")
+            var userName = new Faker<UserNameRequest>("pt_BR")
                 .RuleFor(p => p.Firstname, m => m.Person.FirstName)
                 .RuleFor(p => p.Lastname, m => m.Person.LastName)
                 .Generate();
@@ -76,7 +77,7 @@ namespace Developer.Store.Tests
 
         private static UserAddressRequest CreateUserAddress()
         {
-            var userAddress = new Faker<UserAddressRequest>("Pt-br")
+            var userAddress = new Faker<UserAddressRequest>("pt_BR")
                 .RuleFor(p => p.City, m => m.Address.City())
                 .RuleFor(p => p.Street, m => m.Address.StreetAddress())
                 .RuleFor(p => p.Number, m => m.Address.BuildingNumber())

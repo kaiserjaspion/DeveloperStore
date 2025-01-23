@@ -4,17 +4,17 @@ using System.Text;
 
 internal class Program
 {
-    private async static void Main(string[] args)
+    private  static void Main(string[] args)
     {
         var factory = new ConnectionFactory() { HostName = args[1], Password = args[2], UserName = args[3] };
         using (var connection = factory.CreateConnectionAsync().Result)
         using (var channel = connection.CreateChannelAsync().Result)
         {
-            await channel.QueueDeclareAsync(queue: args[0],
+            var data = channel.QueueDeclareAsync(queue: args[0],
                                  durable: false,
                                  exclusive: false,
                                  autoDelete: false,
-                                 arguments: null);
+                                 arguments: null).Result;
 
             var consumer = new AsyncEventingBasicConsumer(channel);
             var message = string.Empty;

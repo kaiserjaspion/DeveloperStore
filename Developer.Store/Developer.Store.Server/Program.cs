@@ -19,8 +19,9 @@ var systemKey = new SymmetricSecurityKey(
 
 builder.Services.AddSingleton<SymmetricSecurityKey>(systemKey);
 
+var cn = builder.Configuration.GetConnectionString("StoreSQLServerContext");
 builder.Services.AddDbContext<StoreContext>(c => { 
-        c.UseSqlServer(builder.Configuration.GetConnectionString("StoreSQLContext"),b => b.MigrationsAssembly("Developer.Store.Server")); 
+        c.UseSqlServer(cn, b => b.MigrationsAssembly("Developer.Store.Server")); 
     });
 
 Developer.Store.Application.Startup.ConfigureApplicationDepencies(builder.Services);

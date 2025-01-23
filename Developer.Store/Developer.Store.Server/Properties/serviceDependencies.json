@@ -1,9 +1,3 @@
 {
-  "dependencies": {
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "np:::.:pipe:LOCALDB#82B831A6:tsql:query",
-      "dynamicId": null
-    }
-  }
+  "dependencies": {}
 }

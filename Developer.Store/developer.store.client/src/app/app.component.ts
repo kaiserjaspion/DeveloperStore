@@ -1,21 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+interface Rating {
+  rate: number;
+  count: number
 }
+interface Products {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: Rating;
+}
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: false,
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  public forecasts: WeatherForecast[] = [];
+  public Products: Products[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -24,9 +32,9 @@ export class AppComponent implements OnInit {
   }
 
   getForecasts() {
-    this.http.get<WeatherForecast[]>('/weatherforecast').subscribe(
+    this.http.get<Products[]>('/Products').subscribe(
       (result) => {
-        this.forecasts = result;
+        this.Products = result;
       },
       (error) => {
         console.error(error);
